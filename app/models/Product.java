@@ -2,7 +2,7 @@ package models;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import play.data.validation.Constraints;
 public class Product {
 	
 	private static List<Product> products;
@@ -21,9 +21,16 @@ public class Product {
 				"Paperclips description 5"));
 				}
 	
-	public String ean;
-	public String name;
-	public String description;
+	 @Constraints.Required
+	  public String ean;
+	  @Constraints.Required
+	  public String name;
+	  public String description;
+
+	
+//	public String ean;
+//	public String name;
+//	public String description;
 	
 	public Product() {
 		
